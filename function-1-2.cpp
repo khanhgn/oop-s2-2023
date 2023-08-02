@@ -18,7 +18,7 @@ int is_identity(int array[10][10]) {
       }
     }
   }
-  if (isZero == true || isDiagonal == true) {
+  if (isZero == true && isDiagonal == true) {
     return true;
   }
   return false;
