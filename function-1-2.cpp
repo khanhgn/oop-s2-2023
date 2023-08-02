@@ -9,14 +9,17 @@ int is_identity(int array[10][10]) {
     for (int j = 0; j < 4; j++) {
       if (i == j) {
         if (array[i][j] == 1) {
-          isTrue = true;
+          isDiagonal = true;
         }
       } else {
-        if (array[i][j] == 1) {
-          isTrue = true;
+        if (array[i][j] == 0) {
+          isZero = true;
         }
       }
     }
+  }
+  if (isZero == true || isDiagonal == true) {
+    isTrue = true;
   }
   return isTrue;
 }

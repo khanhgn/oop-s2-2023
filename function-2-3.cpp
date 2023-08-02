@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-int sum_if_palindrom(int intergers[], int length) {
+int sum_array_elements(int intergers[], int length) {
   if (length < 1) {
     return -1;
   }
@@ -26,13 +26,13 @@ bool is_palindrome(int intergers[], int length) {
   return true;
 }
 
-int sum_array_elements(int intergers[], int length) {
+int sum_if_palindrome(int intergers[], int length) {
   if (length < 1) {
     return -1;
   }
   int sum;
   if (is_palindrome(intergers, length) == true) {
-    sum = sum_if_palindrom(intergers, length);
+    sum = sum_array_elements(intergers, length);
   } else if (is_palindrome(intergers, length) == false) {
     return -2;
   }

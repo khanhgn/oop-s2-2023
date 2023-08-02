@@ -9,7 +9,7 @@ int array_min(int intergers[], int length) {
   }
   int min = intergers[0];
   for (int i = 1; i < length; i++) {
-    if (intergers[i] < intergers[i - 1]) {
+    if (intergers[i] < min) {
       min = intergers[i];
     }
   }
@@ -22,7 +22,7 @@ int array_max(int intergers[], int length) {
   }
   int max = intergers[0];
   for (int i = 1; i < length; i++) {
-    if (intergers[i] > intergers[i - 1]) {
+    if (intergers[i] > max) {
       max = intergers[i];
     }
   }
