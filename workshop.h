@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// void changeValue(double* ptr) { *ptr = 42; }
+void changeValue(double* ptr) { *ptr = 42; }
 
 void printArray(double* array, int length) {
   for (int i = 0; i < length; i++) {
