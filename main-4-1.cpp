@@ -7,6 +7,6 @@ extern void printNumbers(int *numbers, int length);
 
 int main() {
   int *array = readNumbers();
-  printNumbers(array, 10);
+  cout << secondSmallestSum(array, 10) << endl;
   return 0;
 }
