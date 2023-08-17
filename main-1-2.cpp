@@ -1,8 +1,7 @@
 #include <iostream>
 
 #include "Person.h"
-#include "function-1-1.cpp"
-#include "function-1-2.cpp"
+
 using namespace std;
 
 extern PersonList createPersonList(int n);

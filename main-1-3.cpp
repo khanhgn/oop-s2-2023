@@ -1,12 +1,10 @@
 #include <iostream>
 
 #include "Person.h"
-#include "function-1-1.cpp"
-#include "function-1-2.cpp"
-#include "function-1-3.cpp"
 
 using namespace std;
 
+extern PersonList createPersonList(int n);
 extern PersonList deepCopyPersonList(PersonList pl);
 
 int main() {
