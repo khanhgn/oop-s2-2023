@@ -19,7 +19,7 @@ int main() {
     cout << shallowCopy.people[i].name << " " << shallowCopy.people[i].age
          << endl;
   }
-  delete[] shallowCopy.people;
+  delete[] list.people;
 
   return 0;
 }

@@ -4,8 +4,8 @@
 
 using namespace std;
 
-extern PersonList createPersonList(int n);
 extern PersonList deepCopyPersonList(PersonList pl);
+extern PersonList createPersonList(int n);
 
 int main() {
   PersonList list = createPersonList(5);
