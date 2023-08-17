@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// extern Person* createPersonArray(int n);
+extern PersonList shallowCopyPersonList(PersonList pl);
 
 int main() {
   PersonList list = createPersonList(5);

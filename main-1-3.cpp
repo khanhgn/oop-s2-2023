@@ -7,7 +7,7 @@
 
 using namespace std;
 
-// extern Person* createPersonArray(int n);
+extern PersonList deepCopyPersonList(PersonList pl);
 
 int main() {
   PersonList list = createPersonList(5);

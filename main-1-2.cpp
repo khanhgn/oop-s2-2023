@@ -5,7 +5,7 @@
 #include "function-1-2.cpp"
 using namespace std;
 
-// extern Person* createPersonArray(int n);
+extern PersonList createPersonList(int n);
 
 int main() {
   PersonList list = createPersonList(5);
