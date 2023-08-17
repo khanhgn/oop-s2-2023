@@ -14,4 +14,8 @@ struct PersonList {
   int numPeople;
 };
 
+#include "function-1-2.cpp"
+#include "function-1-3.cpp"
+#include "function-1-4.cpp"
+
 #endif
