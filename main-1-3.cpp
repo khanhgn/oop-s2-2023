@@ -1,15 +1,14 @@
 #include <iostream>
 
 #include "Person.h"
+#include "function-1-2.cpp"
 
 using namespace std;
 
 // extern PersonList deepCopyPersonList(PersonList pl);
 // extern PersonList createPersonList(int n);
 
-extern Person* createPersonArray(int n);
 extern PersonList deepCopyPersonList(PersonList pl);
-extern PersonList createPersonList(int n);
 
 int main() {
   PersonList list = createPersonList(5);

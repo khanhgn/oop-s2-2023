@@ -1,12 +1,11 @@
 #include <iostream>
 
 #include "Person.h"
+#include "function-1-2.cpp"
 
 using namespace std;
 
-extern PersonList createPersonList(int n);
 extern PersonList shallowCopyPersonList(PersonList pl);
-extern Person* createPersonArray(int n);
 
 int main() {
   PersonList list = createPersonList(5);
