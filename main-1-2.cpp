@@ -5,52 +5,43 @@
 #include "Vehicle.h"
 using namespace std;
 #include <iostream>
-
+#include <string>
 int main() {
-  ParkingLot lot(10);
-  int numCars, numBuses, numBikes;
-  cout << "enter number of cars: ";
-  cin >> numCars;
-  cout << "enter number of buses: ";
-  cin >> numBuses;
-  cout << "enter number of bikes: ";
-  cin >> numBikes;
+  ParkingLot lot(2);
+  bool runCon = true;
+  while (runCon) {
+    cout << "Enter vehicle type (1 for car, 2 for bike, 3 for bus):";
+    int vehicleType;
+    cin >> vehicleType;
+    cout << "Enter vehicle ID: ";
+    int ID;
+    cin >> ID;
+    Vehicle* newVehicle;
+    switch (vehicleType) {
+      case 1:
+        newVehicle = new Car(ID);
+        break;
+      case 2:
+        newVehicle = new Motorbike(ID);
+        break;
+      case 3:
+        newVehicle = new Bus(ID);
+        break;
+    }
 
-  int index = 0;
-  for (int i = 0; i < numCars; i++) {
-    int ID;
-    cout << "enter car id: ";
-    cin >> ID;
-    if (vehicles[i].parkVehicle(new Car(ID))) {
-      cout << "parked car successfully" << endl;
+    if (lot.parkVehicle(newVehicle)) {
+      cout << "parked successfully" << endl;
     } else {
-      cout << "lot full" << endl;
-    }
-  }
-  for (int i = 0; i < numBuses; i++) {
-    int ID;
-    cout << "enter bus id: ";
-    cin >> ID;
-    if (vehicles[i].parkVehicle(new Bus(ID))) {
-      cout << "parked bus successfully" << endl;
-    } else {
-      cout << "lot full" << endl;
-    }
-  }
-  for (int i = 0; i < numBikes; i++) {
-    int ID;
-    cout << "enter motorbike id: ";
-    cin >> ID;
-    if (vehicles[i].parkVehicle(new Motorbike(ID))) {
-      cout << "parked motorbike successfully" << endl;
-    } else {
-      cout << "lot full" << endl;
+      delete newVehicle;
+      cout << "parked not successfully" << endl;
+      runCon = false;
     }
   }
 
-  for (int i = 0; i < numCars + numBikes + numBuses; i++) {
-    cout << lot[i]->getID() << " parked for: " << lot[i]->getParkingDuration()
-         << endl;
-  }
+  cout << "Enter ID to unpark: ";
+  int ID;
+  cin >> ID;
+  lot.unparkVehicle(ID);
+
   return 0;
 }
