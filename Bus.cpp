@@ -1,6 +1,8 @@
+#include "Bus.h"
+
 #include <iostream>
 
-#include "header.h"
+#include "Vehicle.h"
 using namespace std;
 
 int Bus::getParkingDuration() { return Vehicle::getParkingDuration() * 0.75; };

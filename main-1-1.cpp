@@ -1,4 +1,7 @@
-#include "header.h"
+#include "Bus.h"
+#include "Car.h"
+#include "Motorbike.h"
+#include "Vehicle.h"
 using namespace std;
 #include <iostream>
 

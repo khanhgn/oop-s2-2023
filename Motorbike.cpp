@@ -1,6 +1,10 @@
+#include "Motorbike.h"
+
 #include <iostream>
 
-#include "header.h"
+#include "Vehicle.h"
 using namespace std;
 
-int Motorbike::getParkingDuration() { return Vehicle::getParkingDuration() * 0.85; };
+int Motorbike::getParkingDuration() {
+  return Vehicle::getParkingDuration() * 0.85;
+};

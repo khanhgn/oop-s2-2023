@@ -1,3 +1,5 @@
+#ifndef BIKE_H
+#define BIKE_H
 #include <iostream>
 using namespace std;
 #include "Vehicle.h"
@@ -6,3 +8,4 @@ class Motorbike : public Vehicle {
   Motorbike(int ID) : Vehicle(ID){};
   int getParkingDuration();
 };
+#endif
