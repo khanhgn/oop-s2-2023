@@ -11,21 +11,3 @@ class Vehicle {
   int getID();
   virtual int getParkingDuration();
 };
-
-class Car : public Vehicle {
- public:
-  Car(int ID) : Vehicle(ID){};
-  int getParkingDuration();
-};
-
-class Bus : public Vehicle {
- public:
-  Bus(int ID) : Vehicle(ID){};
-  int getParkingDuration();
-};
-
-class Motorbike : public Vehicle {
- public:
-  Motorbike(int ID) : Vehicle(ID){};
-  int getParkingDuration();
-};
