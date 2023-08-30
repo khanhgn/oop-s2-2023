@@ -16,5 +16,6 @@ class ParkingLot {
   int getCount();
   bool parkVehicle(Vehicle* vehicle);
   void unparkVehicle(int ID);
+  ~ParkingLot();
 };
 #endif

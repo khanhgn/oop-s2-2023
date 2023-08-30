@@ -7,7 +7,7 @@ using namespace std;
 #include <iostream>
 #include <string>
 int main() {
-  ParkingLot lot(2);
+  ParkingLot lot(10);
   bool runCon = true;
   while (runCon) {
     cout << "Enter vehicle type (1 for car, 2 for bike, 3 for bus):";
