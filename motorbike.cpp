@@ -3,4 +3,4 @@
 #include "header.h"
 using namespace std;
 
-int Motorbike::getParkingDuration() { return (time(0) - timeOfEntry) * 0.85; };
+int Motorbike::getParkingDuration() { return Vehicle::getParkingDuration() * 0.85; };

@@ -15,9 +15,26 @@ int main() {
   int index = 0;
   for (int i = 0; i < numCars; i++) {
     int ID;
-    cout << "enter id: ";
+    cout << "enter car id: ";
     cin >> ID;
     list[index++] = new Car(ID);
+  }
+  for (int i = 0; i < numBuses; i++) {
+    int ID;
+    cout << "enter bus id: ";
+    cin >> ID;
+    list[index++] = new Bus(ID);
+  }
+  for (int i = 0; i < numBikes; i++) {
+    int ID;
+    cout << "enter motorbike id: ";
+    cin >> ID;
+    list[index++] = new Motorbike(ID);
+  }
+
+  for (int i = 0; i < numCars + numBikes + numBuses; i++) {
+    cout << list[i]->getID() << " parked for: " << list[i]->getParkingDuration()
+         << endl;
   }
   return 0;
 }
