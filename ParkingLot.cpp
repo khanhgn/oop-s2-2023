@@ -29,4 +29,6 @@ void ParkingLot::unparkVehicle(int ID) {
   }
   cout << "Vehicle not in the lot" << endl;
 };
+int ParkingLot::getCount() { return current; };
+
 ParkingLot ::~ParkingLot() { delete[] vehicles; }
