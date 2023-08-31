@@ -53,6 +53,7 @@ int ParkingLot::countOverstayingVehicles(int maxParkingDuration) {
       numberOverstay--;
     }
     return numberOverstay;
-  };
+  }
+};
 
-  ParkingLot ::~ParkingLot() { delete[] vehicles; };
+ParkingLot ::~ParkingLot() { delete[] vehicles; };
