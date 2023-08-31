@@ -45,7 +45,6 @@ int ParkingLot::countOverstayingVehicles(int maxParkingDuration) {
         numberOverstay++;
       }
     }
-    return numberOverstay;
   } else if (current = max) {
     for (int i = 0; i < current; i++) {
       if (vehicles[i].getParkingDuration() >= maxParkingDuration) {
@@ -53,8 +52,8 @@ int ParkingLot::countOverstayingVehicles(int maxParkingDuration) {
       }
       numberOverstay--;
     }
-    return numberOverstay;
   }
+  return numberOverstay;
 };
 
 ParkingLot ::~ParkingLot() { delete[] vehicles; };
