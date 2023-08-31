@@ -6,7 +6,7 @@
 
 class ParkingLot {
  private:
-  Vehicle** vehicles;
+  Vehicle* vehicles;
   int max;
   int current;
 
