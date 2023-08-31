@@ -21,14 +21,20 @@ bool ParkingLot::parkVehicle(Vehicle* vehicle) {
   return false;
 };
 void ParkingLot::unparkVehicle(int ID) {
+  bool removed = false;
   for (int i = 0; i < current; i++) {
     if (vehicles[i].getID() == ID) {
       for (int j = i; j < current - 1; j++) {
         vehicles[j] = vehicles[j + 1];
       }
+      removed = true;
     }
   }
-  cout << "Vehicle not in the lot" << endl;
+  if (removed == true) {
+    current--;
+  } else {
+    cout << "Vehicle not in the lot" << endl;
+  }
 };
 int ParkingLot::getCount() { return current; };
 
