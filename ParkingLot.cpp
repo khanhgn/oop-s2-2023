@@ -17,13 +17,13 @@ bool ParkingLot::parkVehicle(Vehicle* vehicle) {
     current++;
     return true;
   }
+  cout << "The lot is full" << endl;
   return false;
 };
 void ParkingLot::unparkVehicle(int ID) {
   for (int i = 0; i < current; i++) {
     if (vehicles[i]->getID() == ID) {
       delete vehicles[i];
-      cout << "Unparked" << endl;
       return;
     }
   }

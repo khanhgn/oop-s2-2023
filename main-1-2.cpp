@@ -30,13 +30,13 @@ int main() {
     }
 
     if (lot.parkVehicle(newVehicle)) {
-      cout << "parked successfully" << endl;
     } else {
       delete newVehicle;
-      cout << "parked not successfully" << endl;
       runCon = false;
     }
   }
+
+  cout << "There are: " << lot.getCount() << " vehicles in the parking lot";
 
   cout << "Enter ID to unpark: ";
   int ID;
