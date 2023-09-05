@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
-#include "header.h"
+#include "appliance.h"
 
 Appliance::Appliance() {
   isOn = false;
   powerRating = 0;
+  cout << "in default" << endl;
 };
 Appliance::Appliance(int powerRating) {
   isOn = false;

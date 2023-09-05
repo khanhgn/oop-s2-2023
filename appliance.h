@@ -1,3 +1,5 @@
+#ifndef APPLIANCE_H
+#define APPLIANCE_H
 #include <iostream>
 using namespace std;
 
@@ -17,3 +19,4 @@ class Appliance {
   void turnOff();
   virtual double getPowerConsumption();
 };
+#endif

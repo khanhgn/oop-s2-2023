@@ -1,20 +1,18 @@
+#ifndef FRIDGE_H
+#define FRIDGE_H
 #include <iostream>
 using namespace std;
-#include "header.h"
+#include "appliance.h"
 
-class Appliance {
- protected:
-  int powerRating;
-  bool isOn;
+class Fridge : public Appliance {
+ private:
+  double volume;
 
  public:
-  Appliance();
-  Appliance(int powerRating);
-  int get_powerRating();
-  bool get_isOn();
-  void set_powerRating(int powerRating);
-  void set_isOn(bool isOn);
-  void turnOn();
-  void turnOff();
-  virtual double getPowerConsumption();
+  Fridge();
+  Fridge(int powerRating, double volume);
+  double getVolume();
+  void setVolume(double volume);
+  double getPowerConsumption();
 };
+#endif
