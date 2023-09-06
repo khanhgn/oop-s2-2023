@@ -21,3 +21,9 @@ AirCraft** AirFleet::get_fleet() {
   return fleet;
 };  // returns the array of pointers to the five
     // aircraft objects
+
+AirFleet::~AirFleet() {
+  for (int i = 0; i < 5; i++) {
+    delete fleet[i];
+  }
+};

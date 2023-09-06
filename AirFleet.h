@@ -17,6 +17,7 @@ class AirFleet {
 
   AirCraft **get_fleet();  // returns the array of pointers to the five
                            // aircraft objects
+  ~AirFleet();
 };
 
 #endif
