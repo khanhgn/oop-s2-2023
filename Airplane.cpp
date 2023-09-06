@@ -11,7 +11,7 @@ Airplane::Airplane(int w, int p) {
   numPassengers = p;
 };  // Create Airplane with weight w and passengers p
 void Airplane::reducePassengers(int x) {
-  numPassengers--;
+  numPassengers = numPassengers - x;
   if (numPassengers < 0) {
     numPassengers = 0;
   }

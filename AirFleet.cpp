@@ -7,8 +7,8 @@ using namespace std;
 #include "Helicopter.h"
 
 AirFleet() {
-  AirCraft* list[5];
-  list[1] = new Airplane(20, 10);
+  Airplane* a1;
+  a1 = new Airplane(20, 10);
   Helicopter(10000, "BlackHawk");
   AirCraft(5000);
   Helicopter(100, "WhiteHawk");
