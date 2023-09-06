@@ -8,11 +8,9 @@ using namespace std;
 #include "Helicopter.h"
 
 class AirFleet {
- protected:
-  AirCraft **fleet;
-
  public:
   AirFleet();
+  AirCraft **fleet;
   /* creates an air fleet containing pointers to 5 AirCraft objects as an
    * array;
    */
