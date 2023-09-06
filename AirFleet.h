@@ -1,4 +1,4 @@
-#ifdef AIRFLEET_H
+#ifndef AIRFLEET_H
 #include <iostream>
 #include <string>
 using namespace std;
