@@ -1,5 +1,5 @@
 #ifndef AIRCRAFT_H
-
+#define AIRCRAFT_H
 #include <iostream>
 using namespace std;
 

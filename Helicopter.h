@@ -1,4 +1,5 @@
 #ifndef HELICOPTER_H
+#define HELICOPTER_H
 #include <iostream>
 #include <string>
 using namespace std;
