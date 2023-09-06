@@ -18,7 +18,7 @@ int main() {
   cout << "now" << a1.get_name() << "has: " << a1.get_fuel()
        << "and weights: " << a1.get_weight()
        << " it flies: " << a1.get_numberOfFlights() << endl;
-  a1.set_fuel(20);
+  a1.set_fuel(80);
   a1.fly(45, 10);
   cout << "now" << a1.get_name() << "has: " << a1.get_fuel()
        << "and weights: " << a1.get_weight()

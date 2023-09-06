@@ -2,8 +2,12 @@
 
 #include <iostream>
 AirCraft::AirCraft(){};
-AirCraft::AirCraft(int w) { weight = w; };  // creates an Aircraft with weight w
-void AirCraft::refuel() { fuel = 100; };    // Resets fuel back to 100%
+AirCraft::AirCraft(int w) {
+  weight = w;
+  fuel = 100;
+  numberOfFlights = 0;
+};                                        // creates an Aircraft with weight w
+void AirCraft::refuel() { fuel = 100; };  // Resets fuel back to 100%
 void AirCraft::fly(int headwind, int minutes) {
   numberOfFlights++;
 };  // headwind in km/h and minutes (time flying)
