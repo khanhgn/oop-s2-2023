@@ -5,6 +5,8 @@ using namespace std;
 
 Helicopter::Helicopter(){};
 Helicopter::Helicopter(int w, string n) {
+  numberOfFlights = 0;
+  fuel = 100;
   weight = w;
   name = n;
 };  // creates a Helicopter with weight w and name n

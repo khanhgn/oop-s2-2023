@@ -5,6 +5,8 @@ using namespace std;
 
 Airplane::Airplane(){};
 Airplane::Airplane(int w, int p) {
+  numberOfFlights = 0;
+  fuel = 100;
   weight = w;
   numPassengers = p;
 };  // Create Airplane with weight w and passengers p
