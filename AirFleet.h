@@ -8,7 +8,7 @@ using namespace std;
 #include "Helicopter.h"
 
 class AirFleet {
- private:
+ protected:
   AirCraft **fleet;
 
  public:

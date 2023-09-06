@@ -7,7 +7,6 @@ using namespace std;
 #include "Helicopter.h"
 
 AirFleet::AirFleet() {
-  fleet[5];
   fleet[0] = new Airplane(20, 10);
   fleet[1] = new Helicopter(10000, "BlackHawk");
   fleet[2] = new AirCraft(5000);
