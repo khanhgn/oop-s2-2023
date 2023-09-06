@@ -7,12 +7,12 @@ using namespace std;
 #include "Helicopter.h"
 
 AirFleet::AirFleet() {
-  Airplane* a1;
-  a1 = new Airplane(20, 10);
-  Helicopter(10000, "BlackHawk");
-  AirCraft(5000);
-  Helicopter(100, "WhiteHawk");
-  Airplane(15, 20);
+  fleet[5];
+  fleet[0] = new Airplane(20, 10);
+  fleet[1] = new Helicopter(10000, "BlackHawk");
+  fleet[2] = new AirCraft(5000);
+  fleet[3] = new Helicopter(100, "WhiteHawk");
+  fleet[4] = new Airplane(15, 20);
 };
 /* creates an air fleet containing pointers to 5 AirCraft objects as an
  * array;
