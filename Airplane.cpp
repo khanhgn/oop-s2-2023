@@ -22,7 +22,7 @@ void Airplane::fly(int headwind, int minutes) {
   if (headwind >= 60) {
     fuel = fuel - (0.5 * minutes) - (0.001 * numPassengers * minutes);
   } else if (headwind < 60) {
-    fuel = fuel - (0.2 * minutes) - (0.001 * numPassengers * minutes);
+    fuel = fuel - (0.3 * minutes) - (0.001 * numPassengers * minutes);
   }
   if (fuel < 20) {
     fuel = ogFuel;

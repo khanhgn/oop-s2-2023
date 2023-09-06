@@ -6,7 +6,7 @@ using namespace std;
 #include "Airplane.h"
 #include "Helicopter.h"
 
-AirFleet() {
+AirFleet::AirFleet() {
   Airplane* a1;
   a1 = new Airplane(20, 10);
   Helicopter(10000, "BlackHawk");
