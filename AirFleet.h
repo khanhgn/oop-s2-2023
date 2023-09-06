@@ -1,3 +1,4 @@
+#ifdef AIRFLEET_H
 #include <iostream>
 #include <string>
 using namespace std;
@@ -18,3 +19,5 @@ class AirFleet {
   AirCraft **get_fleet();  // returns the array of pointers to the five
                            // aircraft objects
 };
+
+#endif

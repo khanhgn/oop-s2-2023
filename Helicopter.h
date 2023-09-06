@@ -1,3 +1,4 @@
+#ifdef HELICOPTER_H
 #include <iostream>
 #include <string>
 using namespace std;
@@ -14,3 +15,4 @@ class Helicopter : public AirCraft {
 
   void fly(int headwind, int minutes);
 };
+#endif

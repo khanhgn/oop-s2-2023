@@ -1,3 +1,4 @@
+#ifdef AIRPLANE_H
 #include <iostream>
 #include <string>
 using namespace std;
@@ -13,3 +14,4 @@ class Airplane : public AirCraft {
   int get_numPassengers();
   void fly(int headwind, int minutes);
 };
+#endif

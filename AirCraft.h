@@ -1,3 +1,5 @@
+#ifdef AIRCRAFT_H
+
 #include <iostream>
 using namespace std;
 
@@ -19,3 +21,4 @@ class AirCraft {
   int get_weight();
   void set_weight(int weight);
 };
+#endif

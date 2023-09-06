@@ -19,6 +19,6 @@ AirFleet::AirFleet() {
  */
 
 AirCraft AirFleet::** get_fleet() {
-  return;
+  return fleet;
 };  // returns the array of pointers to the five
     // aircraft objects
