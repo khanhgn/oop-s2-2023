@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 class University {
  private:
@@ -7,5 +8,6 @@ class University {
   std::string location;
 
  public:
+  University(string name, string location);
   void addCourse(int id, std::string name);
 };
