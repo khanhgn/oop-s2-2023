@@ -1,29 +1,15 @@
 #include <iostream>
+using namespace std;
 
 #include "Effect.h"
 #include "GameEntity.h"
 #include "Utils.h"
-using namespace std;
 
 int main() {
-  srand(static_cast<unsigned>(time(nullptr)));
-  Utils u;
+  GameEntity pos1(1, 2, 'C');
+  GameEntity pos2(4, 6, 'C');
+  Effect b;
+  Utils c;
 
-  tuple<int, int> pos1 = u.generateRandomPos(20, 10);
-
-  tuple<int, int> pos2 = u.generateRandomPos(20, 10);
-
-  double distance = u.calculateDistance(pos1, pos2);
-
-  cout << "Random Position 1: (" << std::get<0>(pos1) << ", "
-
-       << std::get<1>(pos1) << ")" << std::endl;
-
-  cout << "Random Position 2: (" << std::get<0>(pos2) << ", "
-
-       << std::get<1>(pos2) << ")" << std::endl;
-
-  cout << "Distance between positions: " << distance << std::endl;
-
-  return 0;
+  cout << c.calculateDistance(pos1.getPos(), pos2.getPos()) << endl;
 }
