@@ -10,8 +10,8 @@ class Utils {
     int position = make_tuple(x, y);
     return position;
   }
-  double calculateDistance(std::tuple<int, int> pos1,
-                           std::tuple<int, int> pos2) {
+  static double calculateDistance(std::tuple<int, int> pos1,
+                                  std::tuple<int, int> pos2) {
     int x1, y1, x2, y2;
     x1 = get<0>(pos1);
     y1 = get<1>(pos1);
