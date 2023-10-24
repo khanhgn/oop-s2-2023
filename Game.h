@@ -54,7 +54,8 @@ class Game {
               double distance =
                   Utils::calculateDistance(mine->getPos(), ship->getPos());
               if (distance <= mineDistanceThreshold) {
-                mine->explode();
+                Explosion e1 = mine->explode();
+                e1.apply(*ship);
               }
             }
           }
