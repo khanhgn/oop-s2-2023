@@ -13,7 +13,7 @@ int main() {
   Utils u1;
   Mine m1(1, 1);
   Ship s1(1, 1);
-  Explosion e1(1, 1);
+  Explosion g1(1, 1);
 
   tuple<int, int> x = Utils::generateRandomPos(10, 10);
   tuple<int, int> y = Utils::generateRandomPos(10, 10);

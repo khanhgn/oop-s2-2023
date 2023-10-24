@@ -10,5 +10,6 @@ class Mine : public GameEntity {
     int y = get<1>(position);
     type = 'X';
     Explosion e1(x, y);
+    return e1;
   }
 };
