@@ -8,7 +8,7 @@ class Ship : public GameEntity {
     int x = get<0>(position);
     int y = get<1>(position);
     int newX = x + dx;
-    int newY = x + dy;
+    int newY = y + dy;
     position = make_tuple(newX, newY);
   }
 };
