@@ -1,5 +1,7 @@
 #pragma once
+#include <cmath>
 #include <tuple>
+using namespace std;
 
 class Utils {
  public:
@@ -7,7 +9,7 @@ class Utils {
     int x, y;
     x = rand() % gridWidth;
     y = rand() % gridHeight;
-    int position = make_tuple(x, y);
+    tuple<int, int> position = make_tuple(x, y);
     return position;
   }
   static double calculateDistance(std::tuple<int, int> pos1,
@@ -20,4 +22,4 @@ class Utils {
     double distance = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
     return distance;
   }
-}
+};
