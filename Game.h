@@ -21,6 +21,7 @@ class Game {
   }
   std::vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth,
                                     int gridHeight) {
+    srand(static_cast<unsigned>(time(nullptr)));
     std::vector<GameEntity*> newEntities;
     for (int i = 0; i < numShips; i++) {
       tuple<int, int> shipPos = Utils::generateRandomPos(gridHeight, gridWidth);
