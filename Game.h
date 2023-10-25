@@ -60,11 +60,11 @@ class Game {
           Trap* trap = dynamic_cast<Trap*>(cell);
           for (Cell* character : grid) {
             if (dynamic_cast<Character*>(character)) {
-              Character* character = dynamic_cast<Character*>(cell);
+              Character* character = dynamic_cast<Character*>(character);
               double dist =
                   Utils::calculateDistance(trap->getPos(), character->getPos());
               if (dist <= trapActivationDistance) {
-                // trap->apply(*character);
+                trap->apply(*character);
               }
             }
           }
