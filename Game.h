@@ -30,5 +30,15 @@ class Game {
           Utils::generateRandomPos(gridWidth, gridHeight);
       entities.push_back(new Mine(get<0>(position)), get<1>(position));
     }
+    set_entity(entities);
+    return get_entity();
+  }
+  void gameLoop(int maxIterations, double mineDistanceThreshold) {
+    int iter = 0;
+    while (iter < maxIterations) {
+      for (GameEntity* entity : entities) {
+        if
+      }
     }
+  }
 };
