@@ -9,8 +9,9 @@ class Trap : public Cell, public Effect {
 
  public:
   Trap(int x, int y) : Cell(x, y, 'T') {}
-  bool isActive() void apply(Cell& cell) {
+  bool isActive() { return active; }
+  void apply(Cell& cell) {
     cell.setType('T');
     active = false;
   }
-}
+};
