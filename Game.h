@@ -67,9 +67,9 @@ class Game {
         }
       }
       iter++;
-      if (iter >= maxIterations) {
-        cout << "Maximum number of iterations reached. Game over." << endl;
-      }
+    }
+    if (iter >= maxIterations) {
+      cout << "Maximum number of iterations reached. Game over." << endl;
     }
     //   end:
     //     cout << "Character has won the game!" << endl;
