@@ -53,8 +53,7 @@ class Game {
           int x = get<0>(currentPos);
           int y = get<1>(currentPos);
           if (x > width || y > height) {
-            cout << "Character has won the game!" << endl;
-            break;
+            goto end;
           }
         }
         if (dynamic_cast<Trap*>(cell)) {
@@ -65,12 +64,14 @@ class Game {
               double dist =
                   Utils::calculateDistance(trap->getPos(), character->getPos());
               if (dist <= trapActivationDistance) {
-                trap->apply(*character);
+                // trap->apply(*character);
               }
             }
           }
         }
       }
     }
+  end:
+    cout << "Character has won the game!" << endl;
   }
 };
