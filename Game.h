@@ -1,5 +1,6 @@
 #pragma once
 using namespace std;
+#include <iostream>
 #include <tuple>
 #include <vector>
 
@@ -12,6 +13,8 @@ using namespace std;
 class Game {
  private:
   std::vector<Cell*> grid;
+  int width;
+  int height;
 
  public:
   Game() {}
@@ -19,6 +22,8 @@ class Game {
   void setGrid(vector<Cell*> newGrid) { grid = newGrid; }
   void initGame(int numCharacters, int numTraps, int gridWidth,
                 int gridHeight) {
+    width = gridWidth;
+    height = gridHeight;
     vector<Cell*> newGrid;
     for (int i = 0; i < numCharacters; i++) {
       tuple<int, int> pos = Utils::generateRandomPos(gridWidth, gridHeight);
@@ -36,11 +41,34 @@ class Game {
   }
   void gameLoop(int maxIterations, double trapActivationDistance) {
     int iter = 0;
+    if (iter >= maxIterations) {
+      cout << "Maximum number of iterations reached. Game over." << endl;
+    }
     while (iter < maxIterations) {
       for (Cell* cell : grid) {
         if (dynamic_cast<Character*>(cell)) {
-          cell = dynamic_cast<Character*>(cell);
-          cell->move()
+          Character* character = dynamic_cast<Character*>(cell);
+          character->move(1, 0);
+          tuple<int, int> currentPos = character->getPos();
+          int x = get<0>(currentPos);
+          int y = get<1>(currentPos);
+          if (x > width || y > height) {
+            cout << "Character has won the game!" << endl;
+            break;
+          }
+        }
+        if (dynamic_cast<Trap*>(cell)) {
+          Trap* trap = dynamic_cast<Trap*>(cell);
+          for (cell* character : grid) {
+            if (dynamic_cast<character*>(grid)) {
+              Character* character = dynamic_cast<character*>(cell);
+              double dist =
+                  Utils::calculateDistance(trap->getPos(), character->getPos());
+              if (dist <= trapActivationDistance) {
+                trap.apply(*character);
+              }
+            }
+          }
         }
       }
     }
