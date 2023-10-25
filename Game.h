@@ -15,49 +15,20 @@ class Game {
   std::vector<GameEntity*> entities;
 
  public:
-  std::vector<GameEntity*> get_entities() { return entities; }
-  void set_entities(const std::vector<GameEntity*>& newEntities) {
-    entities = newEntities;
-  }
+  vector<GameEntity*> get_entity() { return entities; }
+  void set_entity(vector<GameEntity*> _entities) { entities = _entities; }
   std::vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth,
                                     int gridHeight) {
-    srand(static_cast<unsigned>(time(nullptr)));
-    std::vector<GameEntity*> newEntities;
+    vector<GameEntity*> entities;
     for (int i = 0; i < numShips; i++) {
-      tuple<int, int> shipPos = Utils::generateRandomPos(gridHeight, gridWidth);
-      newEntities.push_back(new Ship(get<0>(shipPos), get<1>(shipPos)));
+      tuple<int, int> position =
+          Utils::generateRandomPos(gridWidth, gridHeight);
+      entities.push_back(new Ship(get<0>(position)), get<1>(position));
     }
     for (int i = 0; i < numMines; i++) {
-      tuple<int, int> pos = Utils::generateRandomPos(10, 10);
-      newEntities.push_back(new Mine(get<0>(pos), get<1>(pos)));
+      tuple<int, int> position =
+          Utils::generateRandomPos(gridWidth, gridHeight);
+      entities.push_back(new Mine(get<0>(position)), get<1>(position));
     }
-    set_entities(newEntities);
-    return get_entities();
-  }
-  void gameLoop(int maxIterations, double mineDistanceThreshold) {
-    int QV = 0;
-    while (QV < maxIterations) {
-      for (GameEntity* entity : entities) {
-        if (dynamic_cast<Ship*>(entity)) {
-          Ship* ship = dynamic_cast<Ship*>(entity);
-          ship->move(1, 0);
-        }
-        if (dynamic_cast<Mine*>(entity)) {
-          Mine* mine = dynamic_cast<Mine*>(entity);
-          for (GameEntity* shipEntity : entities) {
-            if (dynamic_cast<Ship*>(shipEntity)) {
-              Ship* ship = dynamic_cast<Ship*>(shipEntity);
-              double dist =
-                  Utils::calculateDistance(mine->getPos(), ship->getPos());
-              if (dist <= mineDistanceThreshold) {
-                Explosion e1 = mine->explode();
-                e1.apply(*ship);
-              }
-            }
-          }
-        }
-      }
-      QV++;
     }
-  }
 };
