@@ -5,14 +5,14 @@ using namespace std;
 
 class Utils {
  public:
-  std::tuple<int, int> generateRandomPos(int gridWidth, int gridHeight) {
+  static std::tuple<int, int> generateRandomPos(int gridWidth, int gridHeight) {
     int x = rand() % gridWidth;
     int y = rand() % gridHeight;
     tuple<int, int> newPos = make_tuple(x, y);
     return newPos;
   }
-  double calculateDistance(std::tuple<int, int> pos1,
-                           std::tuple<int, int> pos2) {
+  static double calculateDistance(std::tuple<int, int> pos1,
+                                  std::tuple<int, int> pos2) {
     double x1, y1, x2, y2;
     x1 = get<0>(pos1);
     y1 = get<1>(pos1);
