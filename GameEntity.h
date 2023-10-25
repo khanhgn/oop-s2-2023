@@ -14,4 +14,5 @@ class GameEntity {
   char getType() { return type; }
   void setPos(std::tuple<int, int> pos) { position = pos; }
   void setType(char type) { this->type = type; }
+  virtual ~GameEntity(){};
 };

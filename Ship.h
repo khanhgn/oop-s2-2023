@@ -11,4 +11,5 @@ class Ship : public GameEntity {
     int newY = y + dy;
     position = make_tuple(newX, newY);
   }
+  ~Ship() {}
 };
