@@ -13,4 +13,5 @@ class Cell {
   char getType() { return type; }
   void setPos(int x, int y) { position = make_tuple(x, y); }
   void setType(char type) { this->type = type; }
+  virtual ~Cell() {}
 };
