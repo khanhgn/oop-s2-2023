@@ -49,7 +49,7 @@ class Game {
           int x = get<0>(character->getPos());
           int y = get<1>(character->getPos());
           if (x > width || y > height) {
-            cout << "Character has won the game!" << endl;
+            goto end;
           }
         }
         if (dynamic_cast<Trap*>(cell)) {
@@ -71,7 +71,8 @@ class Game {
     if (iter >= maxIterations) {
       cout << "Maximum number of iterations reached. Game over." << endl;
     }
-    //   end:
-    //     cout << "Character has won the game!" << endl;
+
+  end:
+    cout << "Character has won the game!" << endl;
   }
 };
