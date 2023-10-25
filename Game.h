@@ -40,6 +40,7 @@ class Game {
     setGrid(newGrid);
   }
   void gameLoop(int maxIterations, double trapActivationDistance) {
+    bool winCon = false;
     int iter = 0;
     while (iter < maxIterations) {
       for (Cell* cell : grid) {
@@ -49,6 +50,7 @@ class Game {
           int x = get<0>(character->getPos());
           int y = get<1>(character->getPos());
           if (x > width || y > height) {
+            winCon = true;
             goto end;
           }
         }
@@ -73,6 +75,8 @@ class Game {
     }
 
   end:
-    cout << "Character has won the game!" << endl;
+    if (winCon == true) {
+      cout << "Character has won the game!" << endl;
+    }
   }
 };
